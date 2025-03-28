@@ -2,12 +2,14 @@
 import sqlite3
 
 # establecer la conexion
+conexion = sqlite3.connect('web2.sqlite3')
+cursor = conexion.cursor()
 
 # eliminar la tabla
 
 # crear la tabla
 cursor.execute("""
-
+DROP TABLE IF EXISTS productos;
 """)
 
 # insertar los datos iniciales
@@ -24,7 +26,7 @@ datos = [
 ]
 
 cursor.executemany("""
-
+INSERT INTO productos VALUES (?, ?, ?, ?, ?, ?)
 """, datos)
 
 # grabar
