@@ -1,8 +1,24 @@
 {% extends 'base.html' %}
 
-{% block titulo %}{{producto.id}}: {{producto.nombre}}{% endblock %}
+{% block titulo %}Tienda Virtual{% endblock %}
 
 {% block contenido %}
-
-
+    <table align="center">
+            <tr>
+                <td>
+                    <img src="{{ url_for('static', filename ='fotos/') }}{{producto.id}}.jpg" width="256" alt="">
+                </td>
+                <td><h2>{{ producto.categoria }} - {{ producto.marca }}</h2>
+                    <h1>{{ producto.nombre }}</h1>
+                    <h2>{{ "{:,}".format(producto.precio) }}</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/">
+                        <button aling="center">Volver</button>
+                    </a>
+                </td>
+            </tr>
+    </table>
 {% endblock %}

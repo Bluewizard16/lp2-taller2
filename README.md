@@ -43,6 +43,11 @@ Maecenas sed lorem at arcu varius mollis. Sed eleifend nulla ut blandit interdum
 1. Ejecutar el proyecto
 ```bash
 cd lp2-taller2
-python main.py
+
+# En caso de que la base de datos esté vacía ejecute:
+python3 crear_db.py
+
+# Depués ejecute:
+python3 main.py
 ```
 

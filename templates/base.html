@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
   <head>
-    <title>{& block title %}{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
   </head>
   <body>
     <img src="{{ url_for('static', filename ='imagenes/titulo.png')}}" class="center" alt="">

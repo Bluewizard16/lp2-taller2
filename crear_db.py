@@ -6,9 +6,22 @@ conexion = sqlite3.connect('web2.sqlite3')
 cursor = conexion.cursor()
 
 # eliminar la tabla
+cursor.execute("""
+DROP TABLE IF EXISTS productos;
+""")
 
 # crear la tabla
-cursor.execute("DROP TABLE IF EXISTS productos;")
+cursor.execute("""
+CREATE TABLE productos (
+  id INTEGER PRIMARY KEY,
+  categoria TEXT NOT NULL,
+  marca TEXT NOT NULL,
+  nombre TEXT NOT NULL,
+  descripcion TEXT NOT NULL,
+  precio INTEGER NOT NULL
+);
+""")
+
 
 # insertar los datos iniciales
 datos = [
