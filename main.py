@@ -3,7 +3,16 @@ import sqlite3
 from pprint import pprint
 
 # cargamos todos los datos
-
+conexion = sqlite3.connect('web2.sqlite3')
+conexion.row_factory = sqlite3.Row # Modo diccionario
+cursor = conexion.cursor()
+cursor.execute("""
+SELECT * FROM productos;
+""")
+productos = [ dict(p) for producto in cursor.fetchall() ]
+pprint(productos)
+cursor.close()
+conexion.close()
 
 # aplicación
 app = Flask(__name__)
