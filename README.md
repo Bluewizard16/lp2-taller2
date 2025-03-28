@@ -7,7 +7,7 @@
 
 ## Autores
 
-- [@estudiante](https://www.github.com/estudiante)
+- [@William Angulo](https://www.github.com/Bluewizard16)
 
 ## Descripción del Proyecto
 
@@ -27,8 +27,8 @@ git clone https://github.com/UR-CC/lp2-taller2.git
 2. Crear y activar entorno virtual
 ```bash
 cd lp2-taller2
-python -m venv venv
-venv/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 ```
 
 3. Instalar librerías y dependencias
@@ -43,6 +43,6 @@ Maecenas sed lorem at arcu varius mollis. Sed eleifend nulla ut blandit interdum
 1. Ejecutar el proyecto
 ```bash
 cd lp2-taller2
-python app.py
+python main.py
 ```
 

@@ -1,9 +1,10 @@
 <!doctype html>
 <html>
   <head>
-
+    <title>{& block title %}{% endblock %}</title>
   </head>
   <body>
-
+    <img src="{{ url_for('static', filename ='imagenes/titulo.png')}}" class="center" alt="">
+    {% block contenido %}{% endblock %}
   </body>
 </html>

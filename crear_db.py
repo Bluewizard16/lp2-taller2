@@ -8,9 +8,7 @@ cursor = conexion.cursor()
 # eliminar la tabla
 
 # crear la tabla
-cursor.execute("""
-DROP TABLE IF EXISTS productos;
-""")
+cursor.execute("DROP TABLE IF EXISTS productos;")
 
 # insertar los datos iniciales
 datos = [

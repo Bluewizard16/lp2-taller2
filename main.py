@@ -6,9 +6,7 @@ from pprint import pprint
 conexion = sqlite3.connect('web2.sqlite3')
 conexion.row_factory = sqlite3.Row # Modo diccionario
 cursor = conexion.cursor()
-cursor.execute("""
-SELECT * FROM productos;
-""")
+cursor.execute("SELECT * FROM productos;")
 productos = [ dict(p) for producto in cursor.fetchall() ]
 pprint(productos)
 cursor.close()
@@ -20,6 +18,7 @@ app = Flask(__name__)
 # rutas
 @app.route('/')
 def ruta_raiz():
+  return render_template('index.html', productos=productos)
   pass
 
 @app.route('/producto/<int:pid>')

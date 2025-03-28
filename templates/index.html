@@ -3,6 +3,14 @@
 {% block titulo %}Tienda Virtual{% endblock %}
 
 {% block contenido %}
-
+    <table>
+        {% fot producto in productos %}
+            <tr>
+                <td>{{ producto.marca }}</td>
+                <td>{{ producto.nombre }}</td>
+                <td>{{ producto.precio }}</td>
+            </tr>
+        {% endfor %}
+    </table>
 
 {% endblock %}
